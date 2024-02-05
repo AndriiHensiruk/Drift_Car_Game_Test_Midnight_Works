@@ -915,6 +915,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 6cc031a77f676ac448bc392ea683c4ae,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1121178157849420133}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 6cc031a77f676ac448bc392ea683c4ae,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 7475528402787235853}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 6cc031a77f676ac448bc392ea683c4ae,
         type: 3}
@@ -1107,6 +1111,23 @@ MonoBehaviour:
   brakeMaterial: {fileID: 2100000, guid: 68ac01daaeafc134cabb5724f90dfc20, type: 2}
   brakingColor: {r: 1, g: 0, b: 0, a: 1}
   brakeColorIntensity: 2
+--- !u!114 &1121178157849420133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169630412891850817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9224630459937449c69b7ce461e955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GearsCanvas: {fileID: 0}
+  SelectItemCanvas: {fileID: 0}
+  selectText: {fileID: 0}
+  nextButton: {fileID: 0}
+  previousButton: {fileID: 0}
 --- !u!114 &7475528402787235853
 MonoBehaviour:
   m_ObjectHideFlags: 0
