@@ -13,7 +13,7 @@ public class GarageCamera : MonoBehaviour
 {
     public Transform target; // The object you want to rotate around
     public float rotationSpeed = 5.0f;
-
+     public GameObject panel;
     private Vector3 lastMousePosition;
     private Transform tempCameraPosition;
     public float damping = 5;
@@ -79,6 +79,7 @@ public class GarageCamera : MonoBehaviour
                 if (Input.GetKey(KeyCode.Escape))
                 {
                     state = CameraState.Orbiting;
+                    panel.SetActive(false);
                     //FindObjectOfType<PartsManagerUI>().GoBack();
                 }
                 break;
@@ -93,7 +94,7 @@ public class GarageCamera : MonoBehaviour
 
         targeObject = lookAt;
         state = CameraState.LookingAt;
-
+        panel.SetActive(true);
     }
 
     

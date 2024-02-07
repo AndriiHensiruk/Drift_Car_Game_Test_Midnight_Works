@@ -5,6 +5,7 @@ using UnityEngine;
 public class PartsGear : MonoBehaviour
 {
     public string partName;
+   
     private GarageCamera garageCamera;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class PartsGear : MonoBehaviour
     public void SelectItem()
     {
         garageCamera.LookAt(transform);
-        FindObjectOfType<PartsManagerUI>().GoToSelectMenu(partName);
+       
     }
 
 }

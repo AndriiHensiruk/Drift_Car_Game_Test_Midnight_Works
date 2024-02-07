@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class CustTire : MonoBehaviour
+public class CarCustomize : MonoBehaviour
 {
  
     [SerializeField] MeshFilter[] tireMeshFilters; // Array of mesh filters for all wheels
@@ -13,7 +13,7 @@ public class CustTire : MonoBehaviour
     [SerializeField] Mesh[] tireMeshes;// Array of different meshes for the wheels
 
     int curTireMesh;// Variable to keep track of the current wheel mesh
-
+    public Material bodyCarColor;
     // Method to change wheel mesh
     public void ChangeTire(Mesh meshToChange)
     {
@@ -67,6 +67,10 @@ public class CustTire : MonoBehaviour
         {
             meshFilter.mesh = selectedMesh;// Change the meshes of all wheels to the selected mesh
         }
+    }
+     public void setColor(Color C)
+    {
+        bodyCarColor.color = C;
     }
     
 }
