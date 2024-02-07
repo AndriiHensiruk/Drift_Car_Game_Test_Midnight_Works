@@ -978,10 +978,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 6cc031a77f676ac448bc392ea683c4ae,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1121178157849420133}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: 6cc031a77f676ac448bc392ea683c4ae,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2115069980491649144}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 6cc031a77f676ac448bc392ea683c4ae,
         type: 3}
@@ -1121,23 +1117,6 @@ MonoBehaviour:
   wheelSteeringAngle: 40
   wheelAcceleration: 30
   wheelMaxSpeed: 1000
---- !u!114 &1121178157849420133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4169630412891850817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9224630459937449c69b7ce461e955, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GearsCanvas: {fileID: 0}
-  SelectItemCanvas: {fileID: 0}
-  selectText: {fileID: 0}
-  nextButton: {fileID: 0}
-  previousButton: {fileID: 0}
 --- !u!114 &2115069980491649144
 MonoBehaviour:
   m_ObjectHideFlags: 0
