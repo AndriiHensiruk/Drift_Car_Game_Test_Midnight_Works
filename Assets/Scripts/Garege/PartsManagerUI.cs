@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using ExitGames.Client.Photon.StructWrapping;
 
 
 public class PartsManagerUI : MonoBehaviour
@@ -15,8 +16,8 @@ public class PartsManagerUI : MonoBehaviour
     private int tempSelected = 0;
     public GameObject nextButton;
     public GameObject previousButton;
-    private PartType selectPart;
-
+    
+    private string _partName;
 
     // Start is called before the first frame update
     void Start()
@@ -24,41 +25,35 @@ public class PartsManagerUI : MonoBehaviour
         partsManager = FindObjectOfType<PartsManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void GoToSelectMenu(string partName)
     {
         StartCoroutine(FadeBetween(SelectItemCanvas, GearsCanvas));
-        selectPart = partsManager.GetPartType(partName);
-        currentSelected = selectPart.selected;
-        tempSelected = selectPart.selected;
-        previousButton.gameObject.SetActive(tempSelected > 0);
-        nextButton.SetActive(tempSelected < selectPart.parts.Length - 1);
-        selectText.text = "Selected";
-
+        _partName = partName;
+       
     }
 
-    public void ChangePart(int move)
+    public void ChangePart()
     {
-        if(tempSelected+move>=0&& tempSelected + move < selectPart.parts.Length)
-        {
-            tempSelected += move;
-            partsManager.SetPartFromId(selectPart, tempSelected);
-            previousButton.gameObject.SetActive(tempSelected > 0);
-            nextButton.SetActive(tempSelected < selectPart.parts.Length - 1);
-            if (currentSelected == tempSelected)
-            {
-                selectText.text = "Selected";
-            }
-            else
-            {
-                selectText.text = "Select";
-            }
-        }
+        
+        if(_partName == "Spoiler")
+        partsManager.ChangeCarPart(PartsManager.BodyPartType.Spoiler);
+
+        if(_partName == "Skirt")
+        partsManager.ChangeCarPart(PartsManager.BodyPartType.Skirt);
+
+        if(_partName == "RearBumper")
+        partsManager.ChangeCarPart(PartsManager.BodyPartType.RearBumper);
+
+        if(_partName == "Wheels")
+        partsManager.ChangeCarPart(PartsManager.BodyPartType.Wheels);
+
+        if(_partName == "FrontBumper")
+        partsManager.ChangeCarPart(PartsManager.BodyPartType.FrontBumper);
+
+           
+        
     }
 
     public void SelectPart()
@@ -83,7 +78,7 @@ public class PartsManagerUI : MonoBehaviour
     public void GoBack()
     {
 
-        partsManager.SetPartFromId(selectPart, currentSelected);
+       // partsManager.SetPartFromId(selectPart, currentSelected);
         StartCoroutine(FadeBetween( GearsCanvas, SelectItemCanvas));
         FindObjectOfType<GarageCamera>().state = CameraState.Orbiting;
 
