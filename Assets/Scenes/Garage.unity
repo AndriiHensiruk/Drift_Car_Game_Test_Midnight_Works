@@ -2368,6 +2368,11 @@ MonoBehaviour:
   bodyPartDataArray:
   - bodyPartType: 4
     meshArray:
+    - {fileID: -1318047512830575791, guid: fa36b13799504ee4c833a61849f4af6f, type: 3}
+    - {fileID: 4300002, guid: 6cc031a77f676ac448bc392ea683c4ae, type: 3}
+    skinnedMeshRenderer: {fileID: 1591730001}
+  - bodyPartType: 0
+    meshArray:
     - {fileID: 4300002, guid: 6cc031a77f676ac448bc392ea683c4ae, type: 3}
     - {fileID: 4300006, guid: 6cc031a77f676ac448bc392ea683c4ae, type: 3}
     - {fileID: 4300010, guid: 6cc031a77f676ac448bc392ea683c4ae, type: 3}
